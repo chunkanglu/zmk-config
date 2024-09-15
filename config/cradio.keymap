@@ -36,10 +36,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W       &kp F             &kp P        &kp G        &kp J      &kp L        &kp U              &kp Y       &kp SEMICOLON
-&ht LEFT_GUI A  &ht LALT R  &ht LEFT_SHIFT S  &ht LCTRL T  &kp D        &kp H      &ht RCTRL N  &ht RIGHT_SHIFT E  &ht RALT I  &ht RIGHT_GUI O
-&kp Z           &kp X       &kp C             &kp V        &kp B        &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH
-                                              &lt 2 TAB    &kp ENTER    &kp SPACE  &lt 1 BSPC
+&kp Q           &kp W       &kp F             &kp P        &kp G            &kp J      &kp L        &kp U              &kp Y       &kp SEMICOLON
+&ht LEFT_GUI A  &ht LALT R  &ht LEFT_SHIFT S  &ht LCTRL T  &kp D            &kp H      &ht RCTRL N  &ht RIGHT_SHIFT E  &ht RALT I  &ht RIGHT_GUI O
+&kp Z           &kp X       &kp C             &kp V        &kp B            &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH
+                                              &mo 4        &kp BACKSPACE    &kp SPACE  &mo 5
             >;
         };
 
@@ -63,10 +63,28 @@
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &kp EXCL  &kp QUESTION  &kp PIPE    &trans
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &kp AMPS  &kp CARET     &kp TILDE   &kp GRAVE
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &kp AT    &kp PERCENT   &kp DOLLAR  &trans
                              &trans      &trans          &trans  &trans
+            >;
+        };
+
+        nav_layer {
+            bindings = <
+&trans   &trans   &trans     &trans     &trans       &trans  &kp HOME  &kp UP    &kp END    &trans
+&kp ESC  &kp TAB  &kp LSHFT  &kp LCTRL  &kp ENTER    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER
+&trans   &trans   &trans     &trans     &trans       &trans  &trans    &trans    &trans     &trans
+                             &trans     &trans       &trans  &trans
+            >;
+        };
+
+        sym_num_layer {
+            bindings = <
+&kp HASH       &kp STAR          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp FSLH  &kp N7  &kp N8  &kp N9  &kp SEMI
+&kp DQT        &kp SQT           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER    &kp N0    &kp N4  &kp N5  &kp N6  &kp EQUAL
+&kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RBKT               &kp MINUS    &kp BSLH  &kp N1  &kp N2  &kp N3  &kp COLON
+                                                       &trans                 &trans       &trans    &trans
             >;
         };
     };
