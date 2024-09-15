@@ -26,7 +26,7 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
+            if-layers = <3 3>;
             then-layer = <3>;
         };
     };
@@ -36,37 +36,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W       &kp F             &kp P        &kp G            &kp J      &kp L        &kp U              &kp Y       &kp SEMICOLON
+&kp Q           &kp W       &kp F             &kp P        &kp G            &kp J      &kp L        &kp U              &kp Y       &caps_word
 &ht LEFT_GUI A  &ht LALT R  &ht LEFT_SHIFT S  &ht LCTRL T  &kp D            &kp H      &ht RCTRL N  &ht RIGHT_SHIFT E  &ht RALT I  &ht RIGHT_GUI O
 &kp Z           &kp X       &kp C             &kp V        &kp B            &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH
-                                              &mo 4        &kp BACKSPACE    &kp SPACE  &mo 5
-            >;
-        };
-
-        right_layer {
-            bindings = <
-&kp INS     &kp N1  &kp N2  &kp N3  &trans     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
-&kp DEL     &kp N4  &kp N5  &kp N6  &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
-&caps_word  &kp N7  &kp N8  &kp N9  &kp N0     &trans    &trans     &trans     &trans     &trans
-                            &trans  &kp ESC    &trans    &trans
-            >;
-        };
-
-        left_layer {
-            bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
-                              &trans    &trans       &trans     &trans
-            >;
-        };
-
-        tri_layer {
-            bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &kp EXCL  &kp QUESTION  &kp PIPE    &trans
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &kp AMPS  &kp CARET     &kp TILDE   &kp GRAVE
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &kp AT    &kp PERCENT   &kp DOLLAR  &trans
-                             &trans      &trans          &trans  &trans
+                                              &mo 1        &kp BACKSPACE    &kp SPACE  &mo 2
             >;
         };
 
@@ -85,6 +58,15 @@
 &kp DQT        &kp SQT           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER    &kp N0    &kp N4  &kp N5  &kp N6  &kp EQUAL
 &kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RBKT               &kp MINUS    &kp BSLH  &kp N1  &kp N2  &kp N3  &kp COLON
                                                        &trans                 &trans       &trans    &trans
+            >;
+        };
+
+        tri_layer {
+            bindings = <
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &kp EXCL  &kp QUESTION  &kp PIPE    &trans
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &kp AMPS  &kp CARET     &kp TILDE   &kp GRAVE
+&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &kp AT    &kp PERCENT   &kp DOLLAR  &trans
+                             &trans      &trans          &trans  &trans
             >;
         };
     };
