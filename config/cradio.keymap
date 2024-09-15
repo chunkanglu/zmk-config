@@ -44,6 +44,17 @@
             flavor = "tap-unless-interrupted";
             hold-trigger-key-positions = <10 11 12 13 14>;
         };
+
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BALANCED_HOMEROW_MODS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+        };
     };
 
     conditional_layers {
@@ -60,10 +71,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp F               &kp P          &kp G            &kp J      &kp L          &kp U                &kp Y         &caps_word
-&lpht LEFT_GUI A  &lpht LALT R  &lpht LEFT_SHIFT S  &lpht LCTRL T  &kp D            &kp H      &rpht RCTRL N  &rpht RIGHT_SHIFT E  &rpht RALT I  &rpht RIGHT_GUI O
-&kp Z             &kp X         &kp C               &kp V          &kp B            &kp K      &kp M          &kp COMMA            &kp DOT       &kp FSLH
-                                                    &mo 1          &kp BACKSPACE    &kp SPACE  &mo 2
+&kp Q            &kp W        &kp F              &kp P         &kp G            &kp J      &kp L         &kp U               &kp Y        &caps_word
+&bhm LEFT_GUI A  &bhm LALT R  &bhm LEFT_SHIFT S  &bhm LCTRL T  &kp D            &kp H      &bhm RCTRL N  &bhm RIGHT_SHIFT E  &bhm RALT I  &bhm RIGHT_GUI O
+&kp Z            &kp X        &kp C              &kp V         &kp B            &kp K      &kp M         &kp COMMA           &kp DOT      &kp FSLH
+                                                 &mo 1         &kp BACKSPACE    &kp SPACE  &mo 2
             >;
         };
 
