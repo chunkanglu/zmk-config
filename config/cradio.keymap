@@ -20,6 +20,30 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        lpht: left_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "left_positional_hold_tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <15 16 17 18 19>;
+            flavor = "tap-unless-interrupted";
+        };
+
+        rpht: right_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "right_positional_hold_tap";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
+            flavor = "tap-unless-interrupted";
+            hold-trigger-key-positions = <10 11 12 13 14>;
+        };
     };
 
     conditional_layers {
@@ -36,10 +60,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W       &kp F             &kp P        &kp G            &kp J      &kp L        &kp U              &kp Y       &caps_word
-&ht LEFT_GUI A  &ht LALT R  &ht LEFT_SHIFT S  &ht LCTRL T  &kp D            &kp H      &ht RCTRL N  &ht RIGHT_SHIFT E  &ht RALT I  &ht RIGHT_GUI O
-&kp Z           &kp X       &kp C             &kp V        &kp B            &kp K      &kp M        &kp COMMA          &kp DOT     &kp FSLH
-                                              &mo 1        &kp BACKSPACE    &kp SPACE  &mo 2
+&kp Q             &kp W         &kp F               &kp P          &kp G            &kp J      &kp L          &kp U                &kp Y         &caps_word
+&lpht LEFT_GUI A  &lpht LALT R  &lpht LEFT_SHIFT S  &lpht LCTRL T  &kp D            &kp H      &rpht RCTRL N  &rpht RIGHT_SHIFT E  &rpht RALT I  &rpht RIGHT_GUI O
+&kp Z             &kp X         &kp C               &kp V          &kp B            &kp K      &kp M          &kp COMMA            &kp DOT       &kp FSLH
+                                                    &mo 1          &kp BACKSPACE    &kp SPACE  &mo 2
             >;
         };
 
