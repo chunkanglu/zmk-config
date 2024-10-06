@@ -71,35 +71,35 @@
 
         default_layer {
             bindings = <
-&kp Q            &kp W        &kp F              &kp P         &kp G            &kp J      &kp L         &kp U               &kp Y        &caps_word
-&bhm LEFT_GUI A  &bhm LALT R  &bhm LEFT_SHIFT S  &bhm LCTRL T  &kp D            &kp H      &bhm RCTRL N  &bhm RIGHT_SHIFT E  &bhm RALT I  &bhm RIGHT_GUI O
-&kp Z            &kp X        &kp C              &kp V         &kp B            &kp K      &kp M         &kp COMMA           &kp DOT      &kp FSLH
+&kp Q            &kp W        &kp F              &kp P         &kp G            &kp J      &kp L         &kp U          &kp Y        &caps_word
+&bhm LEFT_GUI A  &bhm LALT R  &bhm LEFT_SHIFT S  &bhm LCTRL T  &kp D            &kp H      &bhm LCTRL N  &bhm LSHIFT E  &bhm LALT I  &bhm LGUI O
+&kp Z            &kp X        &kp C              &kp V         &kp B            &kp K      &kp M         &kp COMMA      &kp DOT      &kp FSLH
                                                  &mo 1         &kp BACKSPACE    &kp SPACE  &mo 2
             >;
         };
 
         nav_layer {
             bindings = <
-&trans        &trans   &trans     &trans     &trans        &trans  &kp HOME  &kp UP    &kp END    &kp DELETE
-&kp LEFT_GUI  &kp TAB  &kp LSHFT  &kp LCTRL  &kp ESCAPE    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER
-&trans        &trans   &trans     &trans     &trans        &trans  &trans    &trans    &trans     &trans
-                                  &trans     &trans        &trans  &trans
+&kp TAB       &trans    &trans     &trans     &trans        &trans  &kp HOME  &kp UP    &kp END    &kp DELETE
+&kp LEFT_GUI  &kp LALT  &kp LSHFT  &kp LCTRL  &kp ESCAPE    &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER
+&trans        &trans    &trans     &trans     &trans        &trans  &trans    &trans    &trans     &trans
+                                   &trans     &trans        &trans  &trans
             >;
         };
 
         sym_num_layer {
             bindings = <
-&kp HASH       &kp STAR          &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PLUS     &kp FSLH  &kp N7  &kp N8  &kp N9  &kp SEMI
-&kp DQT        &kp SQT           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp UNDER    &kp N0    &kp N4  &kp N5  &kp N6  &kp EQUAL
-&kp LESS_THAN  &kp GREATER_THAN  &kp LEFT_BRACKET      &kp RBKT               &kp MINUS    &kp BSLH  &kp N1  &kp N2  &kp N3  &kp COLON
-                                                       &trans                 &trans       &trans    &trans
+&kp HASH           &kp STAR          &kp LEFT_BRACE                &kp RIGHT_BRACE               &kp PLUS     &kp FSLH  &kp N7               &kp N8         &kp N9        &kp SEMI
+&bhm LEFT_GUI DQT  &bhm LALT SQT     &bhm LSHIFT LEFT_PARENTHESIS  &bhm LCTRL RIGHT_PARENTHESIS  &kp UNDER    &kp N0    &bhm LCTRL NUMBER_4  &bhm LSHFT N5  &bhm LALT N6  &bhm LGUI EQUAL
+&kp LESS_THAN      &kp GREATER_THAN  &kp LEFT_BRACKET              &kp RBKT                      &kp MINUS    &kp BSLH  &kp N1               &kp N2         &kp N3        &kp COLON
+                                                                   &trans                        &trans       &trans    &trans
             >;
         };
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &kp EXCL  &kp QUESTION  &kp PIPE    &trans
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &kp AMPS  &kp CARET     &kp TILDE   &kp GRAVE
+&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &kp AMPS  &kp CARET     &kp TILDE   &trans
+&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &kp EXCL  &kp QUESTION  &kp PIPE    &kp GRAVE
 &trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &kp AT    &kp PERCENT   &kp DOLLAR  &trans
                              &trans      &trans          &trans  &trans
             >;
