@@ -66,6 +66,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        to_game_layer {
+            bindings = <&to 4>;
+            key-positions = <0 1 2 3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -102,6 +111,15 @@
 &bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &kp EXCL  &kp QUESTION  &kp PIPE    &kp GRAVE
 &trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &kp AT    &kp PERCENT   &kp DOLLAR  &trans
                              &trans      &trans          &trans  &trans
+            >;
+        };
+
+        game_layer {
+            bindings = <
+&kp TAB         &kp Q  &kp W  &kp NUMBER_3  &kp R        &none  &none  &none  &none  &to 0
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D         &kp F        &none  &none  &none  &none  &none
+&kp LCTRL       &none  &kp X  &kp NUMBER_4  &kp G        &none  &none  &none  &none  &none
+                              &kp LCTRL     &kp SPACE    &none  &none
             >;
         };
     };
