@@ -66,6 +66,26 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        mmva: mouse_move_accel {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MOUSE_MOVE_ACCEL";
+            #binding-cells = <1>;
+            time-to-max-speed-ms = <800>;
+            x-input-code = <0>;
+            y-input-code = <1>;
+            acceleration-exponent = <2>;
+        };
+
+        msca: mouse_scroll_accel {
+            compatible = "zmk,behavior-input-two-axis";
+            label = "MOUSE_SCROLL_ACCEL";
+            #binding-cells = <1>;
+            x-input-code = <6>;
+            y-input-code = <8>;
+            time-to-max-speed-ms = <800>;
+            acceleration-exponent = <2>;
+        };
     };
 
     conditional_layers {
@@ -100,10 +120,10 @@
 
         nav_layer {
             bindings = <
-&kp TAB           &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP      &trans  &kp HOME  &kp UP    &kp END    &kp DELETE
-&trans            &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp ESCAPE        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER
-&kp LEFT_COMMAND  &kp LEFT_ALT    &kp LSHFT       &kp LCTRL        &msc SCRL_DOWN    &trans  &trans    &trans    &trans     &trans
-                                                  &trans           &trans            &trans  &trans
+&kp TAB           &msc SCRL_LEFT   &mmva MOVE_UP    &msc SCRL_RIGHT   &msc SCRL_UP      &trans  &kp HOME  &kp UP    &kp END    &kp DELETE
+&trans            &mmva MOVE_LEFT  &mmva MOVE_DOWN  &mmva MOVE_RIGHT  &kp ESCAPE        &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp ENTER
+&kp LEFT_COMMAND  &kp LEFT_ALT     &kp LSHFT        &kp LCTRL         &msc SCRL_DOWN    &trans  &trans    &trans    &trans     &trans
+                                                    &trans            &trans            &trans  &trans
             >;
         };
 
